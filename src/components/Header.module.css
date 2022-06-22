@@ -16,25 +16,3 @@ h1{
   font-weight:lighter;
   color: #000;
 }
-
-.whatsApp :hover{
-  color: #25D366;
-}
-.facebook :hover{
-  color: #3b5998;
-}
-.instagram:hover{
-  color:  rgb(224, 42, 93) ;
-}
-.linkedIn:hover{
-  color: #0072b1;
-}
-.telegram:hover{
-  color: #0088CC;
-}
-.github:hover{
-color: #42424263;
-}
-/* .gmail:hover{
-  color:#BB001B;
-} */
