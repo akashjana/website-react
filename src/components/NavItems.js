@@ -1,8 +1,10 @@
 import { Nav, Fade } from "react-bootstrap";
-import { Fragment, useState } from "react";
-import About from "./About";
-import Experience from "./Experience";
-import Connect from "./Connect";
+import React from 'react';
+import { Fragment, useState, Suspense } from "react";
+
+const About = React.lazy(()=>import('./About'));
+const Experience = React.lazy(()=>import('./Experience'));
+const Connect = React.lazy(()=>import('./Connect'));
 
 const NavItems = () => {
   const [openAbout, setOpenAbout] = useState(false);
@@ -57,6 +59,7 @@ const NavItems = () => {
         </Nav.Item>
       </Nav>
       <div>
+          <Suspense fallback={<p></p>}>
         {openAbout && (
           <Fade in={openAbout}>
             <About id="example-fade-text"></About>
@@ -68,6 +71,7 @@ const NavItems = () => {
           </Fade>
         )}
         {openConnect && <Connect></Connect>}
+        </Suspense>
       </div>
     </Fragment>
   );

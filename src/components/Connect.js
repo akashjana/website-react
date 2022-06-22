@@ -57,7 +57,7 @@ const Connect = () => {
         onClick={openWhatsAppHandler}
         icon={faWhatsappSquare}
         className={classes.whatsApp}
-        size="lg"
+        size="2x"
       />{" "}
       {/* <FontAwesomeIcon
       onClick={openGmailHandler}
@@ -69,31 +69,31 @@ const Connect = () => {
         onClick={openInstagramHandler}
         icon={faInstagramSquare}
         className={classes.instagram}
-        size="lg"
+        size="2x"
       />{" "}
       <FontAwesomeIcon
         onClick={openFacebookHandler}
         icon={faFacebook}
         className={classes.facebook}
-        size="lg"
+        size="2x"
       />{" "}
       <FontAwesomeIcon
         onClick={openLinkedinHandler}
         icon={faLinkedin}
         className={classes.linkedIn}
-        size="lg"
+        size="2x"
       />{" "}
       <FontAwesomeIcon
         onClick={openGithubHandler}
         icon={faGithubSquare}
         className={classes.github}
-        size="lg"
+        size="2x"
       />{" "}
       <FontAwesomeIcon
         onClick={openTelegramHandler}
         icon={faTelegram}
         className={classes.telegram}
-        size="lg"
+        size="2x"
       />
     </span>
   );

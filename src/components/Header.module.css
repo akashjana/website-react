@@ -1,10 +1,10 @@
 .header {
-  font-size: xx-large;
+  font-size: x-large;
   margin-top: 50px;
   margin-bottom: 50px;
 }
 .header p {
-  font-size: x-large;
+  font-size: 22px;
   text-align: justify;
 }
 .header div {
@@ -12,7 +12,7 @@
   margin-top: 20px;
 }
 h1{
-  font-size:45px;
+  font-size:40px;
   font-weight:lighter;
   color: #000;
 }

@@ -1,9 +1,12 @@
+import React from 'react';
 import classes from "./Body.module.css";
 import { Row, Col, Image, Container } from "react-bootstrap";
 import { Fragment, useEffect, useState } from "react";
-import ImageCards from "./ImageCards";
+//import ImageCards from "./ImageCards";
 import { getDownloadURL, listAll, ref } from "firebase/storage";
 import { storage } from "../assets/firebase";
+
+const ImageCards = React.lazy(()=>import('./ImageCards'));
 
 const Body = () => {
   const [bodyImage, setbodyImage] = useState([]);
@@ -26,9 +29,11 @@ const Body = () => {
         console.log(err);
       });
   };
+  
   useEffect(() => {
     getImages(bodyImageRef, setbodyImage);
     getImages(gallaryImagesRef, setGallaryImages);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   // const url =
   //   "https://photographylife.com/wp-content/uploads/2020/03/Nikon-Z50-Sample-Image-44.jpg";
@@ -49,14 +54,14 @@ const Body = () => {
           </Col>
           <Col>
             <h1 className={classes.centerAlign}>Akash Jana</h1>
-            <h2 className={classes.centerAlign}>Full Stack Developer</h2>
+            <h3 className={classes.center}>Full Stack Developer</h3>
             <p>Hello welcome to my page. Explore to know more about me.</p>
           </Col>
         </Row>
 
         <Row className={classes.margin}>
-          <h1>Life Event Gallary</h1>
-          <h3>Some of the memorable life moment of my life.</h3>
+          <h2>Life Event Gallary</h2>
+          <h4>Some of the memorable life moment of my life.</h4>
         </Row>
 
         {gallaryImages.length > 0 && (
